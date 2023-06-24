@@ -1,0 +1,100 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO4zs8ERmCAkmEZ+pBKvW6c",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/waveology/kitchen/blob/main/introducci%C3%B3n_nco\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "32NiKazY3gdg"
+      },
+      "outputs": [],
+      "source": [
+        "!pip install ncdump-rich"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ifile = 'spectra_era5_20220101_20220110.rar'\n",
+        "!wget -q --no-check-certificate https://owncloud.aemet.es/index.php/s/aSeQ8EyAMGVkb7r/download -O {ifile} && unrar -o+ e {ifile}"
+      ],
+      "metadata": {
+        "id": "aJddORi14G0N"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!ncdump-rich  --help #spectra_era5_20220101_20220110.nc"
+      ],
+      "metadata": {
+        "id": "gnqoJENj4Mgw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install -q condacolab\n",
+        "import condacolab\n",
+        "condacolab.install()"
+      ],
+      "metadata": {
+        "id": "W9KyqC0d5asu"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "condacolab.check()\n",
+        "!mamba install -q nco"
+      ],
+      "metadata": {
+        "id": "gJ-sykx_6zWw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!ncks spectra_era5_20220101_20220110.nc |head"
+      ],
+      "metadata": {
+        "id": "mfpKbMii5hSM"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
