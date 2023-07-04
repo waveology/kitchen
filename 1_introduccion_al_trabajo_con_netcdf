@@ -1,0 +1,260 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyMx1TKSoZkgJX//rKLfQQu9",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/waveology/kitchen/blob/main/1_introduccion_al_trabajo_con_netcdf\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "---\n",
+        "<html><div style=\"bgcolor:'red';\"><img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=logo.png\"></div></html>\n",
+        "\n",
+        "\n",
+        "* **Autor:** Ernesto Barrera\n",
+        "* **Institución:** AEMET\n",
+        "---"
+      ],
+      "metadata": {
+        "id": "HVGLH2cWfgPa"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Introducción a NetCDF"
+      ],
+      "metadata": {
+        "id": "2ZrBKxI61gN_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_1.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "QPuZJu3acGve"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###¿Qué es NetCDF?"
+      ],
+      "metadata": {
+        "id": "vs8ivHSLfs2B"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_2.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "Xe7NVcbDe_Wj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###¿Cuántos formatos NetCDF existen?"
+      ],
+      "metadata": {
+        "id": "84-WDFycsRf6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_3.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "Uk0QIb-cfzCG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Organización de los datos"
+      ],
+      "metadata": {
+        "id": "nr3hLMtAsV4U"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_4.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "t1OfY4b1jJrp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Componentes básicos"
+      ],
+      "metadata": {
+        "id": "6pMS5GKJsd9A"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_5.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "-pjn5IxmjNej"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Convenciones NetCDF"
+      ],
+      "metadata": {
+        "id": "xCh_2lI_snDo"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_6.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "WWjwvuGvjQNh"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Herramientas para trabajar con NetCDF"
+      ],
+      "metadata": {
+        "id": "jf3Aul25srJZ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_7.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "Mefc-j-kjS54"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####ncdump"
+      ],
+      "metadata": {
+        "id": "zrHKi50VsyE3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_8.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "W_CNEf4_jYMb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####ncview"
+      ],
+      "metadata": {
+        "id": "WVeNXJXDs1Ds"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_9.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "OsY5nFz5je9C"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####Panoply"
+      ],
+      "metadata": {
+        "id": "oFAk-3QCs323"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<html>\n",
+        "<img src=\"https://owncloud.aemet.es/index.php/s/lwiFbCGBRAJHlF7/download?path=%2F&files=introduccion_a_netcdf_10.png\">\n",
+        "</html>"
+      ],
+      "metadata": {
+        "id": "Mqc-d3VxjjiJ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Herramientas avanzadas\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "LLKxrZ6NuecL"
+      }
+    }
+  ]
+}
